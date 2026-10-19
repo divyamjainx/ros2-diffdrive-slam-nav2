@@ -2,6 +2,10 @@
 
 ROS 2 Jazzy + Gazebo Harmonic. Custom robot with lidar and camera, mapping with SLAM Toolbox, autonomous navigation with Nav2.
 
+## Robot Simulation
+
+![ROS 2 Robot Simulation](robot.png)
+
 ## Dependencies
 sudo apt install ros-jazzy-navigation2 ros-jazzy-nav2-bringup ros-jazzy-slam-toolbox ros-jazzy-ros-gz ros-jazzy-teleop-twist-keyboard
 
