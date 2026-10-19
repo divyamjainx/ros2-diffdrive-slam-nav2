@@ -1,0 +1,542 @@
+<?xml version="1.0"?>
+<sdf version='1.10'>
+  <world name='empty'>
+    <physics name='1ms' type='ignored'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <plugin name='gz::sim::systems::Physics' filename='gz-sim-physics-system'/>
+    <plugin name='gz::sim::systems::UserCommands' filename='gz-sim-user-commands-system'/>
+    <plugin name='gz::sim::systems::SceneBroadcaster' filename='gz-sim-scene-broadcaster-system'/>
+    <plugin name='gz::sim::systems::Contact' filename='gz-sim-contact-system'/>
+    <plugin name='gz::sim::systems::Sensors' filename='gz-sim-sensors-system'>
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    <gravity>0 0 -9.8000000000000007</gravity>
+    <magnetic_field>5.5644999999999998e-06 2.2875799999999999e-05 -4.2388400000000002e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <scene>
+      <ambient>0.400000006 0.400000006 0.400000006 1</ambient>
+      <background>0.699999988 0.699999988 0.699999988 1</background>
+      <shadows>true</shadows>
+    </scene>
+    <model name='ground_plane'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.800000012 0.800000012 0.800000012 1</ambient>
+            <diffuse>0.800000012 0.800000012 0.800000012 1</diffuse>
+            <specular>0.800000012 0.800000012 0.800000012 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>0 0 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/office desk/1</uri>
+      <name>Desk</name>
+      <pose>2.2149701118469238 -5.3395805358886719 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/piano/1</uri>
+      <name>Piano</name>
+      <pose>-3.503565788269043 -6.2903280258178711 0 0 0 3.1301899995299269</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/dining table/1</uri>
+      <name>DiningTable</name>
+      <pose>-3.1362900733947754 3.1927285194396973 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/dining chair/1</uri>
+      <name>DiningChair</name>
+      <pose>-3.2448799610137939 4.6878714561462402 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/bed/1</uri>
+      <name>Bed</name>
+      <pose>-6.9743911893387711 4.9374615772805655 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/bathtub/1</uri>
+      <name>Bathtub</name>
+      <pose>2.1751012802124023 4.7318644523620605 0.03743400052189827 0 0 -1.6042300289644058</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/armchair/2</uri>
+      <name>Armchair</name>
+      <pose>-4.2695808410644531 -6.3011088371276855 0 0 0 1.530129994339186</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240</name>
+      <pose>-5.4105062484741211 5.6018400192260742 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_1</name>
+      <pose>-1.9011689227620125 5.5984176114677062 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_2</name>
+      <pose>-3.053109884262085 5.6165728569030762 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_3</name>
+      <pose>-4.2395896059719576 5.6048422856571243 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_4</name>
+      <pose>-7.341649055480957 5.6074800491333008 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_5</name>
+      <pose>-6.6006858301793692 5.6059849578075767 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_6</name>
+      <pose>-8.5202407836914062 5.6082601547241211 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/wide hinged door/2</uri>
+      <name>wide_hinged_door</name>
+      <pose>-9.0272732656765413 -2.6661634695398604 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/vanity/1</uri>
+      <name>Vanity</name>
+      <pose>-1.8192499876022339 5.8848800659179688 -0.11126203835010529 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/fountain/3</uri>
+      <name>fountain</name>
+      <pose>-0.040421999990940094 -0.64311236143112183 0.0076046697795391083 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_0</name>
+      <pose>-8.4126262664794922 1.4938491582870483 0 0 0 1.5859400029192425</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_0_1</name>
+      <pose>-8.4352064576432966 2.665394292196988 0 0 0 1.5859400029192425</pose>
+    </include>
+    <model name='ground_plane_1'>
+      <static>true</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.800000012 0.800000012 0.800000012 1</ambient>
+            <diffuse>0.800000012 0.800000012 0.800000012 1</diffuse>
+            <specular>0.800000012 0.800000012 0.800000012 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>1</iyy>
+            <iyz>0</iyz>
+            <izz>1</izz>
+          </inertia>
+        </inertial>
+        <enable_wind>false</enable_wind>
+      </link>
+      <pose>-8.6641701997907816 2.4579681222860139 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+    </model>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_0_1_1</name>
+      <pose>-8.4533437189280445 3.8289722886951094 0 0 0 1.5859400029192425</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_0_1_2</name>
+      <pose>-8.4736943437306653 5.0125520615296413 0 0 0 1.5859400029192425</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_0_1_3</name>
+      <pose>-8.4856840997523868 5.7299563251977155 0 0 0 1.5859400029192425</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_0_2</name>
+      <pose>-8.3824226075539947 -4.8084221688154658 0 0 0 1.5859400029192425</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_0_2_1</name>
+      <pose>-8.3630108601314497 -5.9916796604812905 0 0 0 1.5859400029192425</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_0_2_2</name>
+      <pose>-8.3475945890855634 -7.1839621499740796 0 0 0 1.5859400029192425</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120</name>
+      <pose>-4.1794924736022949 4.4145522117614746 0 0 0 1.5754000308415197</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_1</name>
+      <pose>-4.1849614787778684 5.598849051658763 0 0 0 1.5754000308415197</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_2</name>
+      <pose>-4.1930079965442264 3.2516504932185706 0 0 0 1.5754000308415197</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_2_1</name>
+      <pose>-8.3532712309864845 -8.3799219734206414 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_2_2</name>
+      <pose>-7.1777026998330786 -8.384400541498767 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_2_3</name>
+      <pose>-5.9830379957876829 -8.3822655260410386 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_2_4</name>
+      <pose>-4.8054694377098297 -8.3838564484080269 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_2_5</name>
+      <pose>-3.6189034274890504 -8.3921172690009662 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_2_6</name>
+      <pose>-2.4252820788413647 -8.3955050341502062 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_2_7</name>
+      <pose>-1.2351852045573171 -8.3972673619946701 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_2_8</name>
+      <pose>-0.055668654575965704 -8.4050481071982617 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_2_9</name>
+      <pose>1.1352908024774964 -8.4109617661643341 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_2_10</name>
+      <pose>2.3268708695517533 -8.4146516890201806 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/minisofa/3</uri>
+      <name>MiniSofa</name>
+      <pose>-7.0909900665283203 -7.0133123397827148 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/tvstand/2</uri>
+      <name>TVStand</name>
+      <pose>-8.7125835418701172 -6.9687628746032715 0 0 0 1.5652100076769133</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_2_1</name>
+      <pose>-5.4227806098459022 -7.1734039000971901 0 0 0 1.5754000308415197</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_2_2</name>
+      <pose>-5.4240877225631019 -5.9778991175796623 0 0 0 1.5754000308415197</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_2_3</name>
+      <pose>-5.4294594985406599 -4.802355633839146 0 0 0 1.5754000308415197</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_2_4</name>
+      <pose>-0.43323215736966192 -7.2299191823356024 0 0 0 1.5754000308415197</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_2_5</name>
+      <pose>-0.43444933811875636 -6.0328222015978819 0 0 0 1.5754000308415197</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_2_6</name>
+      <pose>-0.43639053045258525 -4.8428259196429835 0 0 0 1.5754000308415197</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_1_1</name>
+      <pose>-0.71526595572378127 5.5930088978507229 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_1_2</name>
+      <pose>0.46968873048148363 5.5863608876638375 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_1_3</name>
+      <pose>1.6608610797860441 5.5833584499777515 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/standard toilet/1</uri>
+      <name>Toilet_0</name>
+      <pose>0.83131581544876099 6.1859002113342285 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_1_3_1</name>
+      <pose>2.408119688623743 5.5817550710968051 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_0_1_2_1</name>
+      <pose>3.5166685696569315 -7.205530241912899 0 0 0 1.5859400029192425</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_0_1_2_2</name>
+      <pose>3.5029460215216366 -6.0309281637642771 0 0 0 1.5859400029192425</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_0_1_2_3</name>
+      <pose>3.4892655722045069 -4.8476831255633126 0 0 0 1.5859400029192425</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_0_1_2_3_1</name>
+      <pose>3.4792115159362149 -3.6753601875672417 0 0 0 1.5859400029192425</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_0_1_2_3_2</name>
+      <pose>3.4707512025331488 -2.4964526310574948 0 0 0 1.5859400029192425</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_0_1_2_3_3</name>
+      <pose>3.4528676796706148 -1.3144261674344446 0 0 0 1.5859400029192425</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_0_1_2_3_4</name>
+      <pose>3.438211056209687 -0.11957319158035359 0 0 0 1.5859400029192425</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_0_1_2_3_5</name>
+      <pose>3.4295578883109838 1.058883261951568 0 0 0 1.5859400029192425</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_0_1_2_3_6</name>
+      <pose>3.408886106521154 2.2333010095184505 0 0 0 1.5859400029192425</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_0_1_2_3_6_1</name>
+      <pose>3.3915245731871808 3.4169883662703002 0 0 0 1.5859400029192425</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_0_1_2_3_6_2</name>
+      <pose>3.3780241781625038 4.6040291076588362 0 0 0 1.5859400029192425</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 240/3</uri>
+      <name>nist_maze_wall_240_0_1_2_3_6_3</name>
+      <pose>3.3672517459836886 5.5927806262731581 0 0 0 1.5859400029192425</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_2_7</name>
+      <pose>0.3271586061688696 5.645897031607185 0 0 0 1.5754000308415197</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_2_8</name>
+      <pose>0.33204671498004634 4.458703183720587 0 0 0 1.5754000308415197</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_2_9</name>
+      <pose>0.33506496837663757 3.2606015814314966 0 0 0 1.5754000308415197</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/dining chair/1</uri>
+      <name>DiningChair_0</name>
+      <pose>1.2920700311660767 -5.3331499099731445 0 0 0 1.590202640699635</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/minisofa/3</uri>
+      <name>MiniSofa_0</name>
+      <pose>-7.0913803929142887 -6.2187849515186988 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/minisofa/3</uri>
+      <name>MiniSofa_1</name>
+      <pose>-7.0173082809934844 -5.4452377575629223 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_0</name>
+      <pose>-5.3863752623989098 2.0619749633102078 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_0_1</name>
+      <pose>-6.5801811789772202 2.0626936676490271 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_0_2</name>
+      <pose>-7.2668045242718708 2.0631230849977191 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_0_3</name>
+      <pose>0.32787514808983875 2.0651955268128366 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_0_4</name>
+      <pose>1.1983813047409058 2.0669200420379639 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_0_5</name>
+      <pose>-1.6351274062409751 -4.8543182051681093 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_0_6</name>
+      <pose>-2.8205686669430619 -4.854983445342703 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_0_7</name>
+      <pose>-4.0029792565567313 -4.8560364805750629 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_0_8</name>
+      <pose>-4.4048452377319336 -4.8492999076843262 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_0_9</name>
+      <pose>-6.6231162434004958 -4.8158642738493338 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///home/cst/.gz/fuel/fuel.gazebosim.org/openrobotics/models/nist maze wall 120/3</uri>
+      <name>nist_maze_wall_120_0_10</name>
+      <pose>-7.4722553376798473 -4.8132451418494613 0 0 0 0</pose>
+    </include>
+    <light name='sun' type='directional'>
+      <pose>0 0 10 0 0 0</pose>
+      <cast_shadows>true</cast_shadows>
+      <intensity>1</intensity>
+      <direction>-0.5 0.10000000000000001 -0.90000000000000002</direction>
+      <diffuse>0.800000012 0.800000012 0.800000012 1</diffuse>
+      <specular>0.200000003 0.200000003 0.200000003 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <linear>0.01</linear>
+        <constant>0.90000000000000002</constant>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+  </world>
+</sdf>
